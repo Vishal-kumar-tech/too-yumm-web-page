@@ -33,7 +33,7 @@ Sunmall/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/sunmall.git
+   git clone(https://github.com/Vishal-kumar-tech/too-yumm-web-page.git)
    ```
 2. Open the folder
    ```bash
@@ -68,4 +68,4 @@ This project is for learning purposes. Feel free to use it as a reference.
 ## 👤 Author
 
 **Your Name**
-GitHub: [@your-username](https://github.com/your-username)
+GitHub: [@your-username](https://github.com/Vishal-kumar-tech)
