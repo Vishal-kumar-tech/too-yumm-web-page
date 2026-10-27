@@ -1,0 +1,728 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+font-family: "Roboto Condensed", sans-serif;
+background: #fdf6ee;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 40px;
+    position:relative;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight:bold;
+    font-style: italic;
+    text-decoration: none;
+    color: #111;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.menu{
+    display:flex;
+    gap: 30px;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 4px;
+
+}
+
+.menu a.active{
+    color: #1b6b2f;
+    border-bottom: 2px solid #1b6b2f;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid #222;
+    border-radius: 40px;
+    padding: 8px 16px;
+    background: #fff;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+   background: transparent;
+   width: 160px;
+}
+
+.cart-btn{
+    position: relative;
+    border: none;
+    background: none;
+    font-size:20px;
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+}
+
+.cart-count{
+position:absolute;
+top: -10px;
+right: -10px;
+background: #d61f26;
+color: #fff;
+font-size: 12px;
+width: 18px;
+height: 18px;
+border-radius: 30%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width:900px){
+    .navbar{
+        padding: 14px 20px;
+        flex-wrap:wrap;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .menu{
+        display:none;
+        flex-direction: column;
+        gap:16px;
+        width: 100%;
+        order: 4;
+        padding: 10px 0;
+    }
+
+    .menu.open{
+        display:flex;
+    }
+
+    .nav-right{
+      margin-left: auto;
+    }
+
+    .search-box input{
+        width: 100%;
+    }
+}
+
+
+.left-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    height: auto;
+    width:auto;
+    margin: 20px;
+    padding: 20px 30px;
+}
+
+.left-content h1{
+ font-family: "Roboto Condensed", sans-serif;
+ font-weight: 900px;
+ font-size: 55px;
+ line-height: 1.1;
+}
+
+.left-content .gril{
+    color: #1b6b2f;
+}
+
+.left-content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #898686;
+}
+
+#green{
+    color: #1b6b2f;
+    background: #d7f6de;
+    border: 2px solid #1b6b2f;
+    border-radius: 40px;
+    width: 33%;
+    padding: 0 10px;
+}
+
+.btn{
+    display: flex;
+    gap: 30px;
+}
+
+#cart-btn{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+
+     width: 220px;
+     height: 58px;
+     padding: 6px 10px;
+
+     background-color: #111;
+     color: #fff;
+     border: none;
+     border-radius: 50px;
+     font-weight: bold;
+     font-size: 16px;
+     cursor: pointer;
+   
+}
+
+#cart-btn::before{
+    content: "👜";
+    flex-shrink: 0;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-color: rgb(215, 201, 47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e5ded9;
+    border-radius: 30px;
+    width: 150px;
+    height: 48px;
+    padding: 0 12px;
+    background-color: #f8f5f3;
+    box-sizing: border-box;
+
+}
+
+.quantity button{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+#count{
+    font-size: 18px;
+    font-weight: 700;
+    color: #a52a2a;
+    min-width: 40px;
+    text-align: center;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+
+}
+
+#decrease{
+    font-size: 25px;
+    color: #222;
+}
+#increase{
+    font-size: 25px;
+    color: #da3636;
+}
+
+.item-benefit{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    height: max-content;
+    width: max-content;
+    gap: 30px;
+    padding: 20px 10px;
+}
+
+.benefit{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.benefit i{
+    width: 44px;
+    height: 44px;
+    background-color: #fffefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+#natural i{
+     border: 2px solid #1b3d08;
+    border-radius: 50%;
+    color: #123d20;
+}
+#oven i{
+     border: 2px solid #de973b;
+    border-radius: 50%;
+    color: #f2865b;
+}
+#tasty i{
+     border: 2px solid #de4944;
+    border-radius: 50%;
+    color: #f81212;
+}
+
+.bottom{
+    height: 250px;
+    width: 94%;
+    background-color: #204b2e;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 30px;
+    margin: 0 auto;
+}
+
+.bottom-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-left h1{
+    font-size: 30px;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn2{
+    display: flex;
+    gap: 20px;
+}
+.btn2 button{
+   height: 50px;
+   width:50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+#right{
+   background-color: #123d20;
+   box-shadow: 0px 2px 5px 1px rgb(7, 33, 13);
+}
+#left{
+   background-color: #848885;
+   box-shadow: 0px 2px 5px 1px rgb(7, 33, 13);
+}
+
+.flavour1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+    background-color: #f4efef;
+    height: 80%;
+    width: 23%;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.flavour1 h1{
+font-size: 22px;
+}
+
+.ratings{
+    color: rgb(233, 176, 19);
+}
+
+.order-now{
+    height: 30px;
+    width: 40%;
+    font-size: 13px;
+    font-weight: 550;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f61414;
+}
+
+.flavour2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+    background-color: #f4efef;
+    height: 80%;
+    width: 23%;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.flavour2 h1{
+font-size: 22px;
+}
+
+.flavour3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+    background-color: #f4efef;
+    height: 80%;
+    width: 23%;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.flavour3 h1{
+font-size: 22px;
+}
+
+.packet{
+    position: absolute;
+    height: 115%;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.3));
+}
+
+.flavour1>img{
+    right: 41%;
+    bottom: 0;
+   height: 122%;
+   width: auto;
+}
+.flavour2>img{
+    right: 54%;
+    bottom: 4px;
+   height: 110%;
+   width: auto;
+}
+.flavour3>img{
+    right: 40%;
+    bottom: 0;
+   height: 115%;
+   width: auto;
+}
+
+.hero-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image::before{
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: #d9eec3;
+    z-index: 0;
+}
+
+.hero-image img{
+    position: relative;
+    z-index: 1;
+    height: 480px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(10px 20px 20px rgba(0,0,0,0.25));
+    rotate: -10deg;
+}
+
+.hero-features{
+    flex: 0.6;
+    display: flex;
+    flex-direction:column;
+    gap: 30px;
+}
+
+.f-icon{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#extra-chili{
+    background: #1b6b2f;
+    color: red;
+}
+
+#beef-flavour{
+    background-color: #a52a2a;
+    color: rgba(230, 153, 20, 0.636);
+}
+
+#smokey-sauce{
+    background-color: orange;
+    color: orangered;
+}
+
+.f-text h4{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.f-text p{
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.feature{
+    display: flex;
+    gap: 8px;
+}
+
+.badge{
+    position: absolute;
+    z-index: 2;
+    font-family: 'Lilita One', sans-serif;
+    font-style: italic;
+    font-size: 34px;
+    padding: 6px 22px;
+    border: 3px solid #111;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #111;
+}
+
+.badge-crispy{
+    left: -15%;
+    top: 50%;
+    background: #f5b21b;
+    color: #111;
+    transform: rotate(-8deg);
+    font-weight: 100;
+}
+.badge-tasty{
+    left: 0%;
+    top: 59%;
+    background: #d61f26;
+    color: #fff;
+    transform: rotate(-8deg);
+    font-weight: 100;
+}
+
+
+/*-----Responsive--------*/
+
+html, body{overflow-x:hidden}
+.hero-image img{max-width: 100%;}
+
+@media (max-width: 1200px){
+.left-content{margin: 10px; padding: 20px;}
+.left-content h1{font-size: 44px;}
+.hero-image img{height: 400px;}
+.hero-image::before{width: 320px; height: 320px;}
+.badge{font-size: 26px;}
+.item-benefit{flex-wrap: wrap; width: 100%; gap: 16px;}
+}
+
+@media (max-width: 1024px){
+
+    .hero-top{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-content{
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #green{
+        width: fit-content;
+        padding: 4px 14px;
+    }
+
+    .hero-image{
+        width: 100%;
+        min-height: 420px;
+    }
+
+    .hero-features{
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .feature{ width: 280px; }
+
+    /* flavours: wrap hokar 2 columns mei aayenge */
+    .bottom{
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 50px 20px;
+        padding: 30px 20px 20px;
+        margin-top: 60px;
+    }
+
+    .bottom-left{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flavour1, .flavour2, .flavour3{
+        width: calc(50% - 10px);
+        height: 190px;
+        padding-left: 45%;
+        align-items: flex-start;
+    }
+
+    /* packet ko hamesha card ke left mein rakho */
+    .flavour1>img, .flavour2>img, .flavour3>img{
+        right: auto;
+        left: 8px;
+        bottom: 0;
+        height: 120%;
+    }
+
+    .order-now{ width: 100%; max-width: 140px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px){
+
+    .left-content h1{ font-size: 36px; }
+
+    .btn{ flex-wrap: wrap; gap: 16px; }
+
+    .hero-image{ min-height: 340px; }
+    .hero-image::before{ width: 260px; height: 260px; }
+    .hero-image img{ height: 300px; }
+
+    .badge{ font-size: 20px; padding: 4px 14px; }
+    .badge-crispy{ left: 4%; top: 52%; }
+    .badge-tasty{ left: 10%; top: 64%; }
+
+    .bottom-left h1{ font-size: 24px; }
+
+    .btn2 button{ height: 44px; width: 44px; }
+}
+
+/* ---------- Chhote phones ---------- */
+@media (max-width: 600px){
+
+    .navbar{ padding: 12px 14px; }
+
+    .logo img{ height: 40px; }
+
+    .nav-right{
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .left-content h1{ font-size: 30px; }
+    .left-content p{ font-size: 14px; }
+
+    #cart-btn{ width: 200px; }
+
+    .feature{ width: 100%; }
+
+    .f-icon{ height: 50px; width: 50px; font-size: 24px; }
+
+    /* flavour cards: ek ke neeche ek */
+    .flavour1, .flavour2, .flavour3{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+
+    .flavour1, .flavour2, .flavour3{
+        height: auto;
+        min-height: 170px;
+        padding: 14px 12px 14px 48%;
+        gap: 6px;
+    }
+
+    .flavour1 h1, .flavour2 h1, .flavour3 h1{
+        font-size: 17px;
+        line-height: 1.15;
+    }
+
+    .flavour1>img, .flavour2>img, .flavour3>img{
+        left: 6px;
+        bottom: 0;
+        height: 118%;
+        width: auto;
+        max-width: 42%;      /* packet text ke upar nahi jayega */
+        object-fit: contain;
+        object-position: bottom left;
+    }
+
+    .order-now{
+        width: 100%;
+        max-width: 130px;
+        font-size: 12px;
+    }
+}
